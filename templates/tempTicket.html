@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        
+        <form method=POST action="{{ url_for('confTicket',ticketNum=ticketNum,assigned=assignees,ticket=ticket) }}" >
+            <div class="col-md-4 col-md-offset-4">
+                    <div class="form-group">
+                        <p>ticket id: {{ticketNum}}</p>
+                        <p>Assign To: {{assignees}}</p>
+                        <p>Issue: {{ticket}}</p>
+                    </div>
+                    <button type="submit" name = 'Submit'class="btn btn-primary btn-block">Submit</button>
+                    
+                <br>
+            </div>
+        </form>
+        <form method=POST action="{{ url_for('secondAuth') }}" >
+            <button type="submit"  name ='edit'class="btn btn-primary btn-block">edit</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="extra.css">
+</head>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+                <div class="form-group">
+                    <table>
+                        {%- for row in dictionary %}
+                        <div class = 'ticket'>
+                            <tr>
+                                <ul>{{row}}</ul>
+                            </tr>
+                            {%- endfor %}
+                        </div>
+                    </table>
+                </div>
+         
+            <br>
+            
+        </div>
+    </div>
+</div>
+</html>

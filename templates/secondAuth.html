@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block body %} 
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <form method=POST action="{{ url_for('secondAuth') }}">
+                
+                <div class="form-group">
+                    <label for="exampleInputFirstName">First Name</label>
+                    <input type="text" class="form-control" name="firstName" placeholder="First Name">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputSurname">Surname</label>
+                    <input type="text" class="form-control" name="Surname" placeholder="Surname">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Greenko Usesrname</label>
+                    <input type="text" class="form-control" name="username" placeholder="Username">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" name="pass1" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Please repeat your password</label>
+                    <input type="password" class="form-control" name="pass2" placeholder="Password">
+                    <p><p>{{ticket}}</p></p>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </form>
+            <br>
+        </div>
+    </div>
+</div>
+{% endblock %}
